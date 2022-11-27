@@ -66,7 +66,7 @@ export const register = async (req, res) => {
     };
 
     const newUser = await User.create(payload);
-    return successResponse(req, res, {});
+    return successResponse(req, res, {msg:"User Created Successfully!"});
   } catch (error) {
     return errorResponse(req, res, error.message);
   }
